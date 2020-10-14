@@ -1,0 +1,16 @@
+.header-container{
+    margin-bottom: 150px;
+    background-color: #FBD062;
+    position: relative;
+    height: 100%;
+}
+.header-container::after{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: '';
+    background-color: #FBD062;
+    top: 50px;
+    transform: skewY(-3deg);
+    z-index: -1;
+}

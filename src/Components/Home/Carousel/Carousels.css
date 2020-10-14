@@ -1,0 +1,9 @@
+.carousel-style {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    padding-top: 30px;
+    background-color: #111430;
+  }

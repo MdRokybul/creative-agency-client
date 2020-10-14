@@ -1,0 +1,8 @@
+.card-style{
+    box-shadow: 2px 2px 16px grey;
+    padding-top: 15px;
+    margin: 10px 19px;
+}
+.card-style:hover{
+    cursor: pointer;
+}

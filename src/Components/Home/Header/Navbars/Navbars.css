@@ -1,0 +1,11 @@
+.nav-style{
+    align-items: center;
+}
+
+.nav-style a{
+    color: black;
+}
+
+.nav-style a:hover{
+    text-decoration: none;
+}
