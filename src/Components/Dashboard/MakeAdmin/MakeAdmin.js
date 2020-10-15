@@ -56,10 +56,10 @@ const MakeAdmin = () => {
                 </Col>
             </Row>
             <Row>
-                <Col className="col-md-3 col-sm-6 col-10 mt-5 d-flex">
+                <Col className="col-md-3 col-sm-3 col-10 mt-5 d-flex">
                     <Sidebar></Sidebar>
                 </Col>
-                <Col className="col-md-7 col-sm-6 col-10 ml-auto mr-auto mt-5">
+                <Col className="col-md-7 col-sm-9 col-10 ml-auto mr-auto mt-5">
                     <p>Email</p>
                     <div className="d-flex">
                         <Form style={{ width: '350px' }}>

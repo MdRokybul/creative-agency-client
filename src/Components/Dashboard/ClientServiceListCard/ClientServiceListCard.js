@@ -6,10 +6,10 @@ const ClientServiceListCard = ({ singleOrder }) => {
     return (
         <Col className="col-md-5 col-sm-12 col-12 m-2 mt-5" style={{border: '1px solid gray'}}>
             <Row>
-                <Col className="col-md-6 col-sm-6 col-12">
+                <Col className="col-md-6 col-sm-3 col-12">
 
                 </Col>
-                <Col className="col-md-6 col-sm-6 col-12 text-right">
+                <Col className="col-md-6 col-sm-9 col-12 text-right">
                 {
                     singleOrder.status === "Pending" ? <button className="btn btn-danger status-button"> {singleOrder.status} </button> 
                     : singleOrder.status === "On Going" ? <button className="btn btn-primary status-button"> {singleOrder.status} </button> 
