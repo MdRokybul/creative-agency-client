@@ -31,7 +31,7 @@ const Feedback = () => {
     const [allFeedback, setAllFeedback] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allfeedback')
+        fetch('https://pure-castle-12905.herokuapp.com/allfeedback')
         .then(res => res.json())
         .then(data => setAllFeedback(data))
     },[])

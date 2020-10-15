@@ -12,7 +12,7 @@ const Services = () => {
     const [allService, setAllService] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allservice')
+        fetch('https://pure-castle-12905.herokuapp.com/allservice')
         .then(res => res.json())
         .then(data => setAllService(data))
     },[]);

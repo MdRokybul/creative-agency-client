@@ -40,7 +40,7 @@ const Order = () => {
     }
 
     const handleOrderSubmit = () => {
-        fetch('http://localhost:5000/orders', {
+        fetch('https://pure-castle-12905.herokuapp.com/orders', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(orders)
@@ -52,7 +52,7 @@ const Order = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/allservice')
+        fetch('https://pure-castle-12905.herokuapp.com/allservice')
             .then(res => res.json())
             .then(data => setSelectedService(data))
     }, []);

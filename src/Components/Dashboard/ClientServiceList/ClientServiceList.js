@@ -11,7 +11,7 @@ const ClientServiceList = () => {
     const [individualorder, setIndividualorder] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/individualorder?email='+loggedInUser.email)
+        fetch('https://pure-castle-12905.herokuapp.com/individualorder?email='+loggedInUser.email)
         .then(res => res.json())
         .then(data => setIndividualorder(data))
     },[])

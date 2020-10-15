@@ -27,7 +27,7 @@ const Review = () => {
     }
 
     const handleReview = () => {
-        fetch('http://localhost:5000/addfeedback', {
+        fetch('https://pure-castle-12905.herokuapp.com/addfeedback', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(feedbacks)

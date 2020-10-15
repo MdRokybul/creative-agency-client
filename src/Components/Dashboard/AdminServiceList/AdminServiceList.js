@@ -11,7 +11,7 @@ const AdminServiceList = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/isadmin',{
+        fetch('https://pure-castle-12905.herokuapp.com/isadmin',{
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({email: loggedInUser.email})
@@ -21,7 +21,7 @@ const AdminServiceList = () => {
     }, []);
 
     useEffect(() => {
-        fetch('http://localhost:5000/ordersadmin')
+        fetch('https://pure-castle-12905.herokuapp.com/ordersadmin')
         .then(res => res.json())
         .then(data => setOrders(data))
     },[])
