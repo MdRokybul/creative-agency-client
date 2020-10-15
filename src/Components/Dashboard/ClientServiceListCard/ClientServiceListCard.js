@@ -4,7 +4,7 @@ import './ClientServiceListCard.css'
 
 const ClientServiceListCard = ({ singleOrder }) => {
     return (
-        <Col className="col-md-4 col-sm-11 col-11 m-4 mt-5" style={{border: '1px solid gray'}}>
+        <Col className="col-md-5 col-sm-12 col-12 m-2 mt-5" style={{border: '1px solid gray'}}>
             <Row>
                 <Col className="col-md-6 col-sm-6 col-12">
 
