@@ -39,18 +39,18 @@ const Review = () => {
     return (
         <Container fluid style={{ padding: '30px' }}>
             <Row>
-                <Col className="col-md-2">
+                <Col className="col-md-4">
                     <h1>CREATIVE AGENCY</h1>
                 </Col>
-                <Col className="col-md-9">
+                <Col className="col-md-7 pl-3">
                     <h3>Review</h3>
                 </Col>
             </Row>
             <Row>
-                <Col className="col-md-2 col-sm-3 col-10 d-flex">
+                <Col className="col-md-2 col-sm-3 col-0 d-flex">
                     <Sidebar></Sidebar>
                 </Col>
-                <Col className="col-md-6 col-sm-6 col-10 ml-auto mr-auto">
+                <Col className="col-md-6 col-sm-6 col-12 ml-auto mr-auto">
                     <Form>
                         <Form.Group controlId="formBasicName">
                             <Form.Control type="email" name="name" onBlur={handleBlur} placeholder="Your name/Company's name" />

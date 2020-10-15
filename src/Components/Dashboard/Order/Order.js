@@ -5,7 +5,7 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { ServiceContext, TitleContext, UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
-import OrderTest from './OrderTest';
+
 
 
 const Order = () => {
@@ -18,8 +18,8 @@ const Order = () => {
     let { id } = useParams();
 
     const [orders, setOrders] = useState({
-        name: loggedInUser.displayName,
-        email: loggedInUser.email,
+        name: '',
+        email: '',
         service: '',
         message: '',
         status: 'Pending'
@@ -59,10 +59,18 @@ const Order = () => {
 
 
     useEffect(() => {
-    const single = selectedService.find(singleService => singleService._id === id);
-    setTitle(single);
-    },[selectedService])
+        const single = selectedService.find(singleService => singleService._id === id);
+        setTitle(single);
+    }, [selectedService])
 
+    useEffect(() => {
+        const newOrders = { ...orders };
+        if (id) {
+            newOrders.name = loggedInUser.displayName;
+            newOrders.email = loggedInUser.email;
+            setOrders(newOrders);
+        }
+    }, [])
 
 
     return (
@@ -80,25 +88,29 @@ const Order = () => {
                     <Sidebar></Sidebar>
                 </Col>
                 <Col className="col-md-6 col-sm-6 col-10 ml-auto mr-auto">
-                    <Form>
-                        <Form.Group controlId="formBasicName">
-                            <Form.Control type="text" name="name" value={loggedInUser.displayName} onBlur={handleBlur} placeholder="Your name/Company's name" disabled />
-                        </Form.Group>
-                        <Form.Group controlId="formBasicEmail">
-                            <Form.Control type="email" name="email" value={loggedInUser.email} onBlur={handleBlur} placeholder="Your email address" disabled />
-                        </Form.Group>
-                        <Form.Group controlId="formBasicService">
-                            <Form.Control type="text" name="service" onBlur={handleBlur} value={orders.service} placeholder="Service" disabled />
-                        </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlTextarea1">
-                            <Form.Control as="textarea" rows="3" name="message" onBlur={handleBlur} placeholder="Your message" />
-                        </Form.Group>
-                        {
-                            orders.message !== "" && orders.service !== "" ?
-                                <Button className="main-button text-white pl-5 pr-5" onClick={handleOrderSubmit}>Send</Button> :
-                                <Button className="main-button text-white pl-5 pr-5" disabled>Send</Button>
-                        }
-                    </Form>
+                    {
+                        orders.name ?
+                            <Form>
+                                <Form.Group controlId="formBasicName">
+                                    <Form.Control type="text" name="name" value={orders.name} placeholder="Your name/Company's name" disabled />
+                                </Form.Group>
+                                <Form.Group controlId="formBasicEmail">
+                                    <Form.Control type="email" name="email" value={orders.email} placeholder="Your email address" disabled />
+                                </Form.Group>
+                                <Form.Group controlId="formBasicService">
+                                    <Form.Control type="text" name="service"  value={orders.service} placeholder="Your service will be added automatically" disabled />
+                                </Form.Group>
+                                <Form.Group controlId="exampleForm.ControlTextarea1">
+                                    <Form.Control as="textarea" rows="3" name="message" onChange={handleBlur} placeholder="Your message" />
+                                </Form.Group>
+                                {
+                                    orders.message.length !== "" && orders.service !== "" ?
+                                        <Button className="main-button text-white pl-5 pr-5" onClick={handleOrderSubmit}>Send</Button> :
+                                        <Button className="main-button text-white pl-5 pr-5" disabled>Send</Button>
+                                }
+                            </Form> :
+                            <p>You have to  select service to order</p>
+                    }
                 </Col>
             </Row>
 
