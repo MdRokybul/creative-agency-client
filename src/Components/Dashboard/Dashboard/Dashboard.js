@@ -24,7 +24,7 @@ const Dashboard = () => {
     return (
         <Container fluid>
             <Row>
-                <Col className="col-md-10">
+                <Col className="col-md-12">
                     {
                         isadmin.email ? <AdminServiceList/> : <Order/>
                     }

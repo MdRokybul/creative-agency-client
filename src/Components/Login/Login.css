@@ -15,3 +15,10 @@
 .login-style:hover{
     cursor: pointer;
 }
+
+.login-logo{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}

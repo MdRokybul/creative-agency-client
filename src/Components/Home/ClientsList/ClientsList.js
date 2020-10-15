@@ -9,7 +9,8 @@ import './ClientsList.css';
 
 const ClientsList = () => {
     return (
-        <Container style={{marginBottom: '100px'}}>
+        <Container style={{ marginBottom: '100px' }}>
+
             <Row className="d-flex justify-content-center">
                 <img className="image-style" src={Slack} alt="" />
                 <img className="image-style" src={Google} alt="" />

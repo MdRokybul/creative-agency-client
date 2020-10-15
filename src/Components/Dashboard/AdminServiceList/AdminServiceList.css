@@ -1,0 +1,4 @@
+.scroll-table{
+  overflow: auto;
+  white-space: nowrap;
+}
