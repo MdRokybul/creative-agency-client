@@ -47,10 +47,10 @@ const AdminServiceList = () => {
                             </Col>
                         </Row>
                         <Row>
-                            <Col className="col-md-3 col-sm-6 col-10 mt-5 d-flex">
+                            <Col className="col-md-2 col-sm-6 col-10 mt-5 d-flex">
                                 <Sidebar></Sidebar>
                             </Col>
-                            <Col className="col-md-9 mt-5">
+                            <Col className="col-md-10 mt-5">
                                 <div className="scroll-table">
                                     <Table striped bordered hover>
                                         <thead>
