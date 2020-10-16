@@ -35,7 +35,13 @@ const Review = () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert("Your review has been successfully submitted!")
+                alert("Your review has been successfully submitted!");
+                Array.from(document.querySelectorAll("input")).forEach(
+                    input => input.value = ""
+                )
+                Array.from(document.querySelectorAll("textarea")).forEach(
+                    input => input.value = ""
+                )
             })
     }
 

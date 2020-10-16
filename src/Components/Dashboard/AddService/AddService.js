@@ -33,6 +33,8 @@ const AddService = () => {
             .then(res => res.json())
             .then(data => {
                 alert("Service added successfully!");
+                document.querySelector('input').value = "";
+                document.querySelector('textarea').value = "";
             })
     }
 
@@ -53,7 +55,7 @@ const AddService = () => {
                     <Container fluid style={{ padding: '30px' }}>
                         <Row>
                             <Col className="col-md-3">
-                            <img className="main-logo" src="https://firebasestorage.googleapis.com/v0/b/creative-agency-e5e04.appspot.com/o/logo.png?alt=media&token=8f251a1a-3a65-4afe-8fae-13f674038533" alt=""/>
+                                <img className="main-logo" src="https://firebasestorage.googleapis.com/v0/b/creative-agency-e5e04.appspot.com/o/logo.png?alt=media&token=8f251a1a-3a65-4afe-8fae-13f674038533" alt="" />
                             </Col>
                             <Col className="col-md-8 ml-3">
                                 <h3>Add Service</h3>

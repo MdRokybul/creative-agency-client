@@ -50,6 +50,12 @@ const Order = () => {
             .then(res => res.json())
             .then(data => {
                 alert("Your order has been successfully submitted");
+                Array.from(document.querySelectorAll("input")).forEach(
+                    input => input.value = ""
+                )
+                Array.from(document.querySelectorAll("textarea")).forEach(
+                    input => input.value = ""
+                )
             })
     }
 

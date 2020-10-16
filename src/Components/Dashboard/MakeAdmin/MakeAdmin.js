@@ -27,7 +27,8 @@ const MakeAdmin = () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert("Admin added successfully!")
+                alert("Admin added successfully!");
+                document.querySelector('input').value = "";
             })
     }
 

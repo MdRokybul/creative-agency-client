@@ -4,7 +4,6 @@ import { Col, Container, Row, Table } from 'react-bootstrap';
 import { AdminContext, UserContext } from '../../../App';
 import AdminServiceTable from '../AdminServiceTable/AdminServiceTable';
 import Sidebar from '../Sidebar/Sidebar';
-import './AdminServiceList.css';
 
 const AdminServiceList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
