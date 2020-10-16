@@ -29,9 +29,7 @@ function App() {
   const [services, setServices] = useState({
     id: ''
   });
-  console.log(services);
   const [title, setTitle] = useState({});
-  console.log(title);
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <AdminContext.Provider value={[isadmin, setIsAdmin]}>

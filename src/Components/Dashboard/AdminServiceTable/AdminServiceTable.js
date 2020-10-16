@@ -6,7 +6,6 @@ const AdminServiceTable = ({ order }) => {
     const [serviceUpdate, setServiceUpdate] = useState({
         status: ''
     });
-    console.log(serviceUpdate)
 
     const handleChange = (e) => {
         const newServiceUpdate = { ...serviceUpdate };
@@ -14,6 +13,7 @@ const AdminServiceTable = ({ order }) => {
         setServiceUpdate(newServiceUpdate);
     }
 
+    const [patchOrder, setPatchOrder] = useState()
     useEffect(() => {
         if (serviceUpdate.status !== '') {
             fetch(`https://pure-castle-12905.herokuapp.com/update/${order._id}`, {
@@ -22,24 +22,26 @@ const AdminServiceTable = ({ order }) => {
                 body: JSON.stringify(serviceUpdate)
             })
                 .then(res => res.json())
-                .then(data => console.log(data))
+                .then(data => setPatchOrder(data))
         }
     }, [serviceUpdate])
     return (
-        <tr>
-            <td> {order.name} </td>
-            <td> {order.email} </td>
-            <td> {order.service} </td>
-            <td> {order.message} </td>
-            <td>
-                <select onChange={handleChange} className="form-control" name="status" >
-                    <option selected disabled={true}> {order.status} </option>
-                    <option value="Pending">Pending</option>
-                    <option value="On Going"> On Going </option>
-                    <option value="Done">Done</option>
-                </select>
-            </td>
-        </tr>
+        <>
+            <tr className="col-sm-6 col-12">
+                <td> {order.name} </td>
+                <td> {order.email} </td>
+                <td> {order.service} </td>
+                <td> {order.message} </td>
+                <td>
+                    <select onChange={handleChange} className="form-control" name="status" >
+                        <option selected disabled={true}> {order.status} </option>
+                        <option value="Pending">Pending</option>
+                        <option value="On Going"> On Going </option>
+                        <option value="Done">Done</option>
+                    </select>
+                </td>
+            </tr>
+        </>
     );
 };
 

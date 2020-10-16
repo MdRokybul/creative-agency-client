@@ -8,7 +8,6 @@ import AdminServiceList from '../AdminServiceList/AdminServiceList';
 const Dashboard = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isadmin, setIsAdmin] = useContext(AdminContext);
-    console.log(isadmin);
     
 
     useEffect(() => {

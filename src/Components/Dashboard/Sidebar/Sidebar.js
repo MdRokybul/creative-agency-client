@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useContext } from 'react';
-import { useEffect } from 'react';
-import { Button, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { AdminContext, UserContext } from '../../../App';
+import { AdminContext } from '../../../App';
 import './Sidebar.css';
 
 const Sidebar = () => {
     const [isadmin, setIsAdmin] = useContext(AdminContext);
-    console.log(isadmin)
-
 
     return (
         <>

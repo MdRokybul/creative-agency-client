@@ -30,7 +30,7 @@ const Services = () => {
                 <Container>
                     <Row className="justify-content-center">
                         {
-                            allService.map(service => <ServiceList service={service}></ServiceList>)
+                            allService.map(service => <ServiceList service={service} key={service._id}></ServiceList>)
                         }
                     </Row>
                 </Container>

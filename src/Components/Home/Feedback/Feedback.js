@@ -43,7 +43,7 @@ const Feedback = () => {
             <Row className="justify-content-center">
                 {
                     // clientFeedback.map(client => <FeedbackCards client={client} ></FeedbackCards>)
-                    allFeedback.map(feedback => <FeedbackCards feedback={feedback}></FeedbackCards> )
+                    allFeedback.map(feedback => <FeedbackCards feedback={feedback} key={feedback._id}></FeedbackCards> )
                 }
             </Row>
         </Container>
