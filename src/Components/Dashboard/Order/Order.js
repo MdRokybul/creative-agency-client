@@ -22,7 +22,8 @@ const Order = () => {
         email: '',
         service: '',
         message: '',
-        status: 'Pending'
+        status: 'Pending',
+        price: ''
     });
     console.log(orders);
 
@@ -35,6 +36,10 @@ const Order = () => {
                 newOrders.service = title;
             }
             newOrders.message = e.target.value;
+            setOrders(newOrders);
+        }
+        if(e.target.name === "price"){
+            newOrders.price = e.target.value;
             setOrders(newOrders);
         }
     }
@@ -110,8 +115,11 @@ const Order = () => {
                                 <Form.Group controlId="exampleForm.ControlTextarea1">
                                     <Form.Control as="textarea" rows="3" name="message" onChange={handleBlur} placeholder="Your message" />
                                 </Form.Group>
+                                <Form.Group controlId="formBasicService">
+                                    <Form.Control type="number" name="price" onChange={handleBlur} placeholder="Price" />
+                                </Form.Group>
                                 {
-                                    orders.message.length !== "" && orders.service !== "" ?
+                                    orders.message.length !== "" && orders.service !== "" && orders.price !== ""?
                                         <Button className="main-button text-white pl-5 pr-5" onClick={handleOrderSubmit}>Send</Button> :
                                         <Button className="main-button text-white pl-5 pr-5" disabled>Send</Button>
                                 }
