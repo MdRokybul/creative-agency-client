@@ -26,7 +26,9 @@ const MakeAdmin = () => {
             body: JSON.stringify(admin)
         })
             .then(res => res.json())
-            .then(data => setPostAdmin(data))
+            .then(data => {
+                alert("Admin added successfully!")
+            })
     }
 
     useEffect(() => {

@@ -27,7 +27,6 @@ const Review = () => {
     }
 
 
-    const [postFeedback, setPostFeedback] = useState()
     const handleReview = () => {
         fetch('https://pure-castle-12905.herokuapp.com/addfeedback', {
             method: 'POST',
@@ -35,7 +34,9 @@ const Review = () => {
             body: JSON.stringify(feedbacks)
         })
             .then(res => res.json())
-            .then(data => setPostFeedback(data))
+            .then(data => {
+                alert("Your review has been successfully submitted!")
+            })
     }
 
     return (
