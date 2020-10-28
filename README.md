@@ -10,4 +10,4 @@
 * Make admin - Admin panel is a restricted area without admin can not see the admin panel. Here a admin can make admins with gmails
 
 ### Technology Used:
- React, React Router, ExpressJS, NodeJS, Mongodb, Firebase, Heroku, JavaScript, Bootstrap, HTML, CSS
+ * React, React Router, ExpressJS, NodeJS, Mongodb, Firebase, Heroku, JavaScript, Bootstrap, HTML, CSS
