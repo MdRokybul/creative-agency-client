@@ -5,4 +5,4 @@
 * Login System with Google - One login System for both user and admin
 * Admin Panel - There is an admin panel for controlling the website.
 ### Technology Used:
- HTML, CSS, JavaScript, Bootstrap, React, React Router, ExpressJS, NodeJS, Mongodb, Firebase, Heroku
+ React, React Router, ExpressJS, NodeJS, Mongodb, Firebase, Heroku, JavaScript, Bootstrap, HTML, CSS
